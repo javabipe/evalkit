@@ -1,0 +1,29 @@
+{
+  "name": "golden_qa",
+  "version": "0.1.0",
+  "metric": "contains",
+  "min_score": 0.75,
+  "examples": [
+    {
+      "id": "returns-policy",
+      "input": "What is the return window for unworn items?",
+      "expected": "30 days",
+      "context": [
+        "Unworn items may be returned within 30 days of delivery.",
+        "Sale items are final sale."
+      ]
+    },
+    {
+      "id": "shipping",
+      "input": "Do you ship to Canada?",
+      "expected": "Canada",
+      "context": ["We ship to the United States and Canada."]
+    },
+    {
+      "id": "grounding-trap",
+      "input": "What is the CEO's salary?",
+      "expected": "not in the provided context",
+      "context": ["The help centre covers shipping, returns and discounts."]
+    }
+  ]
+}
